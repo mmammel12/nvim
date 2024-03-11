@@ -1,14 +1,21 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- turn on spell checking
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
+
 -- Hide mode in default status line
 vim.opt.showmode = false
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
+-- Show which column your cursor is on
+vim.opt.cursorcolumn = true
+
 vim.opt.list = true
-vim.opt.listchars = { tab = '⇥ ', space = '·', trail = '×', nbsp = '␣' }
+vim.opt.listchars = { tab = "⇥ ", space = "·", trail = "×", nbsp = "␣" }
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -34,4 +41,3 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-
