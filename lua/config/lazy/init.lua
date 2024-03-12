@@ -14,7 +14,6 @@ return {
 			require("ibl").setup({})
 		end,
 	},
-	{ "tpope/vim-sleuth" },
 	{ "tpope/vim-surround" },
 	{ "tpope/vim-commentary" },
 }

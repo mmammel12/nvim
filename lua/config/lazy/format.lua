@@ -23,7 +23,6 @@ return {
 				markdown = { { "prettierd", "prettier" } },
 				lua = { "stylua" },
 			},
-			format_on_save = formatConfig,
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>f", function()
