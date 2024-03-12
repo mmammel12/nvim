@@ -27,7 +27,7 @@ return {
 		"mxsdev/nvim-dap-vscode-js",
 		dependencies = { "mfussenegger/nvim-dap" },
 		config = function()
-			require("dap-vscode").setup({
+			require("dap-vscode-js").setup({
 				adapters = { "pwa-node", "pwa-chrome" },
 			})
 
