@@ -24,8 +24,6 @@ return {
 				lua = { "stylua" },
 			},
 			format_on_save = formatConfig,
-			-- Conform will notify you when a formatter errors
-			notify_on_error = true,
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>f", function()

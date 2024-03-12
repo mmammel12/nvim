@@ -1,3 +1,4 @@
+-- turn on relative line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -17,11 +18,6 @@ vim.opt.cursorcolumn = true
 vim.opt.list = true
 vim.opt.listchars = { tab = "⇥ ", space = "·", trail = "×", nbsp = "␣" }
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-
 vim.opt.smartindent = true
 
 vim.opt.swapfile = false
@@ -34,7 +30,11 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
+-- set minimum number of screen lines to keep above and below the cursor
 vim.opt.scrolloff = 10
+-- set minimum number of screen columns to keep to the left and to the right of the cursor
+vim.opt.sidescrolloff = 5
+
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
