@@ -1,10 +1,6 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
--- turn on spell checking
-vim.opt.spell = true
-vim.opt.spelllang = "en_us"
-
 -- Hide mode in default status line
 vim.opt.showmode = false
 

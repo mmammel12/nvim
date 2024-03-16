@@ -1,6 +1,5 @@
-require("config.set")
-require("config.remap")
-
+require("shared.set")
+require("shared.remap")
 require("config.lazy_init")
 
 local augroup = vim.api.nvim_create_augroup
