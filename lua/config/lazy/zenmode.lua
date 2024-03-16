@@ -10,8 +10,7 @@ return {
                 },
             }
             require("zen-mode").toggle()
-            ColorMyPencils()
-        end)
+        end, { desc = "zen-mode - Toggle zen mode" })
     end
 }
 

@@ -23,15 +23,15 @@ return {
 
 			vim.keymap.set("n", "<leader>tc", function()
 				neotest.run.run()
-			end)
+			end, { desc = "neotest - Run tests" })
 
 			vim.keymap.set("n", "<leader>tf", function()
 				neotest.run.run(vim.fn.expand("%"))
-			end)
+			end, { desc = "neotest - Run tests for current file" })
 
 			vim.keymap.set("n", "<leader>tw", function()
 				neotest.run.run({ jestCommand = "jest --watch " })
-			end)
+			end, { desc = "neotest - Run tests in watch mode" })
 		end,
 	},
 }

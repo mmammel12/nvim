@@ -1,6 +1,9 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- turn off wrap
+vim.opt.wrap = false
+
 -- Hide mode in default status line
 vim.opt.showmode = false
 

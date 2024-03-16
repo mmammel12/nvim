@@ -25,20 +25,20 @@ return {
 			telescope.load_extension("fzf")
 
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>of", builtin.find_files, {})
-			vim.keymap.set("n", "<C-p>", builtin.git_files, {})
+			vim.keymap.set("n", "<leader>of", builtin.find_files, { desc = "Telescope - Find Files" })
+			vim.keymap.set("n", "<C-p>", builtin.git_files, { desc = "Telescope - Git Files" })
 			vim.keymap.set("n", "<leader>pws", function()
 				local word = vim.fn.expand("<cword>")
 				builtin.grep_string({ search = word })
-			end)
+			end, { desc = "Telescope - Grep Word Under Cursor" })
 			vim.keymap.set("n", "<leader>pWs", function()
 				local word = vim.fn.expand("<cWORD>")
 				builtin.grep_string({ search = word })
-			end)
+			end, { desc = "Telescope - Grep WORD Under Cursor" })
 			vim.keymap.set("n", "<leader>ps", function()
 				builtin.grep_string({ search = vim.fn.input("Grep > ") })
-			end)
-			vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
+			end, { desc = "Telescope - Grep" })
+			vim.keymap.set("n", "<leader>vh", builtin.help_tags, { desc = "Telescope - Help Tags" })
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),

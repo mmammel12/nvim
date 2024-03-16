@@ -13,11 +13,11 @@ return {
 
         vim.keymap.set("n", "<leader>nf", function()
             neogen.generate({ type = "func" })
-        end)
+        end, { desc = "neogen - Generate a function annotation" })
 
         vim.keymap.set("n", "<leader>nt", function()
             neogen.generate({ type = "type" })
-        end)
+        end, { desc = "neogen - Generate a type annotation" })
 
     end,
     version = "*"

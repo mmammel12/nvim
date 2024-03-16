@@ -4,21 +4,35 @@ return {
 		dependencies = { "mfussenegger/nvim-dap" },
 		config = function()
 			require("dapui").setup()
-			require("nvim-dap-virtual-text").setup()
+			require("nvim-dap-virtual-text").setup({})
 			vim.fn.sign_define(
 				"DapBreakpoint",
 				{ text = "🔴", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
 			)
 
 			-- Debugger
-			vim.api.nvim_set_keymap("n", "<leader>dt", ":DapUiToggle<CR>", { noremap = true })
-			vim.api.nvim_set_keymap("n", "<leader>db", ":DapToggleBreakpoint<CR>", { noremap = true })
-			vim.api.nvim_set_keymap("n", "<leader>dc", ":DapContinue<CR>", { noremap = true })
-			vim.api.nvim_set_keymap(
+			vim.keymap.set(
+				"n",
+				"<leader>dt",
+				":lua require('dapui').toggle()<CR>",
+				{ true, desc = "dap - toggle ui" }
+			)
+			vim.keymap.set(
+				"n",
+				"<leader>db",
+				":DapToggleBreakpoint<CR>",
+				{ noremap = true, desc = "dap - toggle breakpoint" }
+			)
+
+			vim.keymap.set("n", "<leader>dc", ":DapContinue<CR>", { noremap = true, desc = "dap - continue" })
+			vim.keymap.set("n", "<leader>do", ":DapStepOver<CR>", { noremap = true, desc = "dap - step over" })
+			vim.keymap.set("n", "<leader>di", ":DapStepInto<CR>", { noremap = true, desc = "dap - step into" })
+			vim.keymap.set("n", "<leader>dO", ":DapStepOut<CR>", { noremap = true, desc = "dap - step out" })
+			vim.keymap.set(
 				"n",
 				"<leader>dr",
-				":lua require('dapui').open({reset = true})<CR>",
-				{ noremap = true }
+				":lua require('dap').restart()<CR>",
+				{ noremap = true, desc = "dap - restart" }
 			)
 		end,
 	},
