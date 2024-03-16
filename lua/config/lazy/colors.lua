@@ -1,11 +1,3 @@
-function ColorMyPencils(color)
-	color = color or "tokyonight-storm"
-	vim.cmd.colorscheme(color)
-
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
-
 return {
 	{
 		"folke/tokyonight.nvim",
@@ -27,9 +19,14 @@ return {
 				},
 			})
 
-			vim.cmd("colorscheme tokyonight")
+			vim.cmd.colorscheme("tokyonight-night")
 
-			ColorMyPencils()
+			vim.keymap.set("n", "<leader>cd", function()
+				vim.cmd("colorscheme tokyonight-day")
+			end, { desc = "Day theme" })
+			vim.keymap.set("n", "<leader>cn", function()
+				vim.cmd.colorscheme("tokyonight-night")
+			end, { desc = "Night theme" })
 		end,
 	},
 }
