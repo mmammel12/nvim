@@ -25,7 +25,7 @@ return {
 			telescope.load_extension("fzf")
 
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>of", builtin.find_files, { desc = "Telescope - Find Files" })
+			vim.keymap.set("n", "<leader>tf", builtin.find_files, { desc = "Telescope - Find Files" })
 			vim.keymap.set("n", "<C-p>", builtin.git_files, { desc = "Telescope - Git Files" })
 			vim.keymap.set("n", "<leader>pws", function()
 				local word = vim.fn.expand("<cword>")

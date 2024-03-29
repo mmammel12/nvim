@@ -5,7 +5,7 @@ return {
 			require("tokyonight").setup({
 				-- your configuration comes here
 				-- or leave it empty to use the default settings
-				style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+				style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
 				transparent = true, -- Enable this to disable setting the background color
 				terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
 				styles = {
@@ -21,12 +21,6 @@ return {
 
 			vim.cmd.colorscheme("tokyonight-night")
 
-			vim.keymap.set("n", "<leader>cd", function()
-				vim.cmd("colorscheme tokyonight-day")
-			end, { desc = "Day theme" })
-			vim.keymap.set("n", "<leader>cn", function()
-				vim.cmd.colorscheme("tokyonight-night")
-			end, { desc = "Night theme" })
 		end,
 	},
 }
