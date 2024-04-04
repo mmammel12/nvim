@@ -8,7 +8,9 @@ return {
 			ui = {
 				cursorline = true,
 				cursorcolumn = true,
-				relativenumber = true,
+			},
+			autoresize = {
+				enable = false,
 			},
 		})
 

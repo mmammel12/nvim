@@ -14,7 +14,6 @@ return {
 				html = { { "prettierd", "prettier" } },
 				json = { { "prettierd", "prettier" } },
 				yaml = { { "prettierd", "prettier" } },
-				markdown = { { "prettierd", "prettier" } },
 				lua = { "stylua" },
 			},
 		})

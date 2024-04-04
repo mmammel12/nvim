@@ -4,6 +4,9 @@ vim.opt.relativenumber = true
 -- turn off wrap
 vim.opt.wrap = false
 
+-- set conceal level to 1 for better formatting in obsidian
+vim.opt.conceallevel = 1
+
 -- Hide mode in default status line
 vim.opt.showmode = false
 

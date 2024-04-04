@@ -21,5 +21,12 @@ return {
 				path = "~/dev/Obsidian/FloQast",
 			},
 		},
+		daily_notes = {
+			folder = "Timestamps" .. tostring(os.date("/%Y/%m-%B")),
+			date_format = "%Y-%m-%d-%A",
+			alias_format = "%A, %B %d, %Y",
+			template = "Daily Note Template.md",
+		},
+		templates = { subdir = "Templates" },
 	},
 }
