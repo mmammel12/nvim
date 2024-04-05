@@ -28,7 +28,7 @@ return {
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { { "macro-recording", fmt = show_macro_recording } },
+				lualine_b = { { "macro-recording", fmt = show_macro_recording }, "filename" },
 				lualine_c = { "branch", "diff", "diagnostics" },
 				lualine_x = { "encoding", "filetype" },
 				lualine_y = { "progress" },
