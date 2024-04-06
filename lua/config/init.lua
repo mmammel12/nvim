@@ -2,6 +2,8 @@ require("shared.set")
 require("shared.remap")
 require("config.lazy_init")
 
+vim.cmd("Copilot disable")
+
 local augroup = vim.api.nvim_create_augroup
 local ThePrimeagenGroup = augroup("ThePrimeagen", {})
 
