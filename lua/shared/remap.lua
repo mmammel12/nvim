@@ -2,6 +2,13 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.keymap.set("n", "<leader>st", function()
+	vim.cmd("set tabstop=4")
+	vim.cmd("set softtabstop=4")
+	vim.cmd("set shiftwidth=4")
+	vim.cmd("set expandtab")
+end, { desc = "Set Tabs to 4 spaces" })
+
 -- remap :Ex
 vim.keymap.set("n", "<leader>ov", vim.cmd.Ex)
 
