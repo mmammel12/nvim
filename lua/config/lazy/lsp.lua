@@ -195,29 +195,21 @@ return {
 			"nvim-lua/plenary.nvim",
 			"neovim/nvim-lspconfig",
 		},
-		opts = {
-			handlers = {
-				["textDocument/publishDiagnostics"] = function(_, result, ctx, config)
-					if result.diagnostics == nil then
-						return
-					end
-
-					local idx = 1
-					while idx <= #result.diagnostics do
-						local entry = result.diagnostics[idx]
-						-- codes: https://github.com/microsoft/TypeScript/blob/main/src/compiler/diagnosticMessages.json
-						if entry.code == 80001 or entry.code == 7016 then
-							-- 80001 = "File is a CommonJS module; it may be converted to an ES module."
-                            -- 7016 = "Could not find a declaration file for module '{0}'. '{1}' implicitly has an 'any' type."
-							table.remove(result.diagnostics, idx)
-						else
-							idx = idx + 1
-						end
-					end
-					vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
-				end,
-			},
-		},
+		config = function()
+			-- local api = require("typescript-tools.api")
+			require("typescript-tools").setup({
+				handlers = {
+					["textDocument/publishDiagnostics"] = function() end,
+					-- api.filter_diagnostics({
+					-- codes: https://github.com/microsoft/TypeScript/blob/main/src/compiler/diagnosticMessages.json
+					-- 80001 = "File is a CommonJS module; it may be converted to an ES module."
+					-- 7016 = "Could not find a declaration file for module '{0}'. '{1}' implicitly has an 'any' type."
+					-- 80001,
+					-- 7016,
+					--}),
+				},
+			})
+		end,
 	},
 
 	{ -- Autocompletion

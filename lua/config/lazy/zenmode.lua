@@ -7,7 +7,7 @@ return {
 					width = 130,
 					options = {
 						wrap = true,
-                        linebreak = true,
+						linebreak = true,
 					},
 				},
 			})

@@ -14,27 +14,27 @@ return {
 				{ text = "🔴", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
 			)
 
-			vim.keymap.set("n", "<leader>dt", function()
+			vim.keymap.set("n", "<leader>bt", function()
 				require("dapui").toggle()
 			end, { desc = "dap - toggle ui" })
 			vim.keymap.set(
 				"n",
-				"<leader>db",
+				"<leader>bb",
 				":DapToggleBreakpoint<CR>",
 				{ noremap = true, desc = "dap - toggle breakpoint" }
 			)
 
-			vim.keymap.set("n", "<leader>dc", ":DapContinue<CR>", { noremap = true, desc = "dap - continue/start" })
-			vim.keymap.set("n", "<leader>do", ":DapStepOver<CR>", { noremap = true, desc = "dap - step over" })
-			vim.keymap.set("n", "<leader>di", ":DapStepInto<CR>", { noremap = true, desc = "dap - step into" })
-			vim.keymap.set("n", "<leader>dO", ":DapStepOut<CR>", { noremap = true, desc = "dap - step out" })
+			vim.keymap.set("n", "<leader>bc", ":DapContinue<CR>", { noremap = true, desc = "dap - continue/start" })
+			vim.keymap.set("n", "<leader>bo", ":DapStepOver<CR>", { noremap = true, desc = "dap - step over" })
+			vim.keymap.set("n", "<leader>bi", ":DapStepInto<CR>", { noremap = true, desc = "dap - step into" })
+			vim.keymap.set("n", "<leader>bO", ":DapStepOut<CR>", { noremap = true, desc = "dap - step out" })
 			vim.keymap.set(
 				"n",
-				"<leader>dr",
+				"<leader>br",
 				":lua require('dap').restart()<CR>",
 				{ noremap = true, desc = "dap - restart" }
 			)
-			vim.keymap.set("n", "<leader>ds", ":DapTerminate<CR>", { noremap = true, desc = "dap - stop" })
+			vim.keymap.set("n", "<leader>bs", ":DapTerminate<CR>", { noremap = true, desc = "dap - stop" })
 		end,
 	},
 

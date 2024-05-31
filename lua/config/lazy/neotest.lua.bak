@@ -33,6 +33,10 @@ return {
 			vim.keymap.set("n", "<leader>tw", function()
 				neotest.run.run({ jestCommand = "jest --watch " })
 			end, { desc = "neotest - Run tests in watch mode" })
+
+			vim.keymap.set("n", "<leader>td", function()
+				neotest.run.run({ strategy = "dap" })
+			end, { desc = "neotest - Debug tests" })
 		end,
 	},
 }
